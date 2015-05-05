@@ -7,3 +7,4 @@ seconds = 1
 while True:
     t.sleep(1)
     print(seconds + 'seconds')
+    hello
