@@ -6,5 +6,5 @@ seconds = 1
 
 while True:
     t.sleep(1)
-    print(str(seconds) + ' seconds')
+    print(c.yellow + str(seconds) + c.red + ' seconds')
     seconds += 1
