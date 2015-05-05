@@ -8,4 +8,3 @@ while True:
     t.sleep(1)
     print(c.yellow + str(seconds) + c.red + ' seconds')
     seconds += 1
-    test
