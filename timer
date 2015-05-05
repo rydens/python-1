@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import colors as c
+import time as t
+
+seconds = 1
+
+while True:
+    t.sleep(1)
+    print(seconds + 'seconds')
