@@ -2,9 +2,37 @@
 import colors as c
 import time as t
 
-seconds = 1
+form = '{}-{:02}:{:02}:{:02}:{:02}'
+hundreths = 0
+seconds = 0
+minutes = 0
+hours = 0
+days = 0
+
 
 while True:
-    t.sleep(1)
-    print(c.yellow + str(seconds) + c.red + ' seconds')
-    seconds += 1
+    print(c.clear + c.red + '[Ctrl + C to exit]')
+    print(c.yellow)
+    print(form.format(days,hours,minutes,seconds,hundreths))
+    print(c.cyan + '^  ^  ^  ^  ^')
+    print(c.cyan + '|  |  |  |  |')
+    print(c.cyan + 'D  H  M  S 1/100')
+    t.sleep(0.01)
+    hundreths += 1
+    if hundreths == 100:
+        hundreths = 0
+        seconds += 1
+    if seconds == 60:
+        seconds = 0
+        minutes += 1
+    if minutes == 60:
+        minutes = 0
+        hours += 1
+    if hours == 24:
+        hours = 0
+        days += 1
+
+
+
+
+
