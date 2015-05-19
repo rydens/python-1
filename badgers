@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+import colors as c
+import time as t
+snake = '''
+┌─┐┌┐┌┌─┐┬┌─┌─┐  |
+└─┐│││├─┤├┴┐├┤   |
+└─┘┘└┘┴ ┴┴ ┴└─┘  • 
+
+'''
+print(c.clear)
+
+while True:
+    for count in range(4):
+        for count in range(11):
+            print(c.green + 'badgers')
+            t.sleep(0.38)
+        for count in range(2):
+            print(c.cyan + 'mushrooms')
+            t.sleep(0.8)
+        t.sleep(0.38)
+        print(c.clear)
+    print(c.clear)
+    print(c.red + 'Oh my gosh its a ' + snake)
+    t.sleep(6)
