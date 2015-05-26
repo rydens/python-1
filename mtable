@@ -1,1 +1,16 @@
 #!/usr/bin/env python3
+import colors as c
+import time as t
+print(c.clear)
+print(c.green + '''
+Welcome to the multiplication tables.
+What number?''')
+
+number = input(c.red + '> ' + c.cyan)
+print(c.green)
+print('Here are the tables for {}:'.format(number))
+t.sleep(2)
+
+for count in range(1,26):
+    answer = count * int(number)
+    print(c.red + '{}'.format(number) + c.base3 + ' x ' +  c.cyan + '{}'.format(count) + c.base3 + ' = ' + c.magenta + '{}'.format(answer))
