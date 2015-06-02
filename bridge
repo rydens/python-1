@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+import colors as c
+import time as t
+
+print(c.clear + c.yellow + '''
+Who would cross the Bridge of Death
+Must answer me these questions three
+'Ere the other side he see.
+''')
+t.sleep(2)
+
+def prompt(question):
+    print(c.green + question)
+    answer = input(c.red + '> ' + c.cyan)
+    print(c.reset)
+    return answer
+
+name = prompt('What is your name?')
+t.sleep(1)
+quest = prompt('What is your quest?')
+t.sleep(1)
+
+
+if name in ['Lancelot', 'Galahad']:
+    q1 = prompt('What is your favorite color?')
+    print(c.yellow + 'Right, off you go then.')
+if name == 'Robin':
+    q1 = prompt('What is the capitol of Assyria?')
+    if q1 == 'Assur':
+        print(c.yellow + 'Right, off you go then.')
+    else:
+        print(c.red + 'I cast you into the Eternal Gorge of Peril!')
