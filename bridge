@@ -11,9 +11,15 @@ t.sleep(2)
 
 def prompt(question):
     print(c.green + question)
-    answer = input(c.red + '> ' + c.cyan)
+    answer = input(c.red + '> ' + c.cyan).lower().strip()
     print(c.reset)
     return answer
+
+def live():
+    print(c.yellow + 'Right, off you go then.')
+
+def die():
+    print(c.red + 'I cast you into the Eternal Gorge of Peril!')
 
 name = prompt('What is your name?')
 t.sleep(1)
@@ -21,12 +27,25 @@ quest = prompt('What is your quest?')
 t.sleep(1)
 
 
-if name in ['Lancelot', 'Galahad']:
+if name in ['lancelot', 'galahad']:
     q1 = prompt('What is your favorite color?')
-    print(c.yellow + 'Right, off you go then.')
-if name == 'Robin':
+    live()
+elif name in ['robin']:
     q1 = prompt('What is the capitol of Assyria?')
-    if q1 == 'Assur':
-        print(c.yellow + 'Right, off you go then.')
+    if q1 == 'assur':
+        live()
     else:
-        print(c.red + 'I cast you into the Eternal Gorge of Peril!')
+        die()
+elif name in ['ryan']:
+    if quest in ['to eat pie']:
+        q1 = prompt('What flavor of pie do you seek to eat?')
+        if q1 in ['elderberry']:
+            live()
+        else:
+            die()
+elif name in ['arthur']:
+    q1 = prompt('What is the airspeed velocity of an unladen swallow?')
+    if q1 in ['what do you mean? an african or european swallow?', 'an african or european swallow?', 'african or european?']:
+        print('What? I dont know! AHHHHHHHHHH!!!!')
+    else:
+        live()
