@@ -7,8 +7,7 @@ print(c.clear)
 print(q.intro)
 
 while q.questions:
-    question_function = random.choice(q.questions)
-    if question_function():
+    if random.choice(q.questions)():
         print(c.magenta + 'You got it right!')
         q.questions.remove(question_function)
     else:
