@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import colors as c
+import fluffy as q #q means quiz
+import random
+
+print(c.clear)
+print(q.intro)
+
+while q.questions:
+    question_function = random.choice(q.questions)
+    if question_function():
+        print(c.magenta + 'You got it right!')
+        q.questions.remove(question_function)
+    else:
+        print(c.magenta + 'Not exactly...')
+
+    

@@ -1,7 +1,0 @@
-#!/usr/bin/env python1
-import colors as c
-import utils as u
-
-print(c.magenta + 'Hi.')
-
-
