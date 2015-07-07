@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+import colors as c
+
+text = '''
+Ad
+Come see and/or try our amazing new product- the {noun}! Our {adj} {ocupation_plural}
+will use our new {noun} on you and cater to your every need for about {number} {unit_of_time_plural}.
+The location is the new {building} downtown in {town}, {state}. There are multiple ways of transportaion
+to get down to the {building}. You could go on a {mot1} or on a {mot2}.
+'''
+
+words = {
+    'noun' : {},
+    'adj' : {},
+    'ocupation_plural' : {},
+    'number' : {},
+    'unit_of_time_plural' : {'desc': 'Unit of Time (plural) such as: "years", "seconds", etc.'},
+    'building' : {},
+    'town' : {},
+    'state' : {},
+    'mot1' : {},
+    'mot2' : {}
+}
+
+print(c.clear + c.green + '''
+Welcome to MadLibs! Enter your answers.
+''')
+
+answers = {}
+for key in words:
+    desc = words[key].get('desc')
+    if desc:
+        print(desc)
+    elif key.startswith('noun'):
+        print(c.yellow + 'Noun '+ c.red + '> ')
+    elif key.startswith('adj'):
+        print(c.yellow + 'Adjective ' + c.red + '> ')
+    elif key.startswith('ocupation_plural'):
+        print(c.yellow + 'Ocupation (Plaural) ' + c.red + '> ')
