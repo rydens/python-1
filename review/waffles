@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+import colors as c
+
+print(c.clear + c.random_color() + 'Do you like Waffles?')
+w = input(c.cyan + '> ' + c.red)
+if w == 'yes':
+    print(c.clear + c.random_color() + 'Do you like Pancakes?')
+    p = input(c.cyan + '> ' + c.red)
+    if p == 'yes':
+        print(c.clear + c.random_color() + 'Do you like French Toast?')
+        f = input(c.cyan + '> ' + c.red)
+        if f == 'yes':
+            print(c.magenta + 'YAY! Then we are all in aggreement, then.')
+        else:
+            print(c.green + 'I like French Toast. :(')
+            exit()
+    else:
+        print(c.green + 'I like Pancakes. :(')
+        exit()
+else:
+    print(c.green + 'I like Waffles. :(')
+    exit()
+    
