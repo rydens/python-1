@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+import colors as c
+import random as r
+
+answers = [
+'Geet off my lawn!',
+'no',
+'yes',
+'maybe',
+'ask again later',
+'me no understand'
+]
+
+print(c.clear + c.green + '''
+Welcome to the Magic Eight Ball!
+Enter your questions below.''')
+while True:
+    q = input(c.red + '> ' + c.cyan)
+    if q == 'exit':
+        exit()
+    answer = r.choice(answers)
+    print(c.magenta + answer)

@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+import colors as c
+import time as t
+
+def live():
+def ask(question):
+    print(question)
+    answer = input(c. + '> ' c. ).lower().strip()
+    return answer

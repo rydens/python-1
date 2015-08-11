@@ -2,7 +2,14 @@
 import colors as c
 import time as t
 
+print(c.clear)
+
 while True:
-    for count in range(12):
-        print(c.green + 'badger')
-        t.sleep(
+    for count in range(4):
+        for count in range(12):
+            print(c.green + 'badger')
+            t.sleep(0.38)
+        for count in range(2):
+            print(c.red + 'mushroom')
+            t.sleep(0.75)
+    print(c.clear + c.magenta + 'ARGHH ITS A SNAKE!')
