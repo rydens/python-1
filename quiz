@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+import colors as c
+import lor as q #q means quiz
+import random
+
+randquestion = 0
+
+print(c.clear)
+print(q.intro)
+
+while q.questions:
+    randquestion = random.choice(q.questions) 
+    if randquestion != 0:
+        randquestion()
+        q.questions.remove(randquestion)
+        randquestion = 0
+
+print(c.BASE01 + '''
+Your score is: ''' + c.BASE3 + str(q.score) + c.reset)

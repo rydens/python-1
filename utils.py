@@ -4,7 +4,7 @@ import colors as c
 
 def ask(question,color=c.green):
     print(color + question + c.reset)
-    answer = input(c.yellow + "> " + c.cyan).lower().strip()
+    answer = input(c.yellow + "> " + c.cyan)
     print(c.reset)
     return answer
 
